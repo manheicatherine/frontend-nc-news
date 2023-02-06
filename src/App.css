@@ -1,5 +1,6 @@
 * {
   background-color: rgb(255, 253, 251);
+  
 }
 
 .App {
@@ -7,6 +8,7 @@
 }
 
 .App-header {
+  margin:40px;
   display: flex;
   flex-direction: column;
   align-items: center;
