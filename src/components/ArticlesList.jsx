@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
-import Article from "./Article"
+import Article from "./Article";
 
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
@@ -15,9 +15,7 @@ export default function ArticlesList() {
     <section>
       <ol>
         {articles.map((article) => {
-          return (
-          <Article article={article}/>
-          );
+          return <Article article={article} key={article.article_id} />;
         })}
       </ol>
     </section>
