@@ -22,12 +22,18 @@
 
 h1 {
   font-family: Georgia, serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #665856;
-  text-shadow: 2px 2px #ff797c;
+  margin: 20px;
+  padding: 60px;
+  color: #675250;
+  text-shadow: 2px 2px #ffa4a6;
   -webkit-text-stroke: 1px #71443f;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://img.freepik.com/free-vector/realistic-vintage-papers_1284-25431.jpg");
 }
+
 h2 {
   font-family: Copperplate;
   padding-top: 20px;
@@ -43,12 +49,14 @@ li {
   color: 1px 1px #5b554f;
 }
 h3 {
+  color:  #524a43;
   font-family: Georgia, serif;
 }
 
 h4 {
   font-family: Gill Sans, sans-serif;
   font-weight: normal;
+  color: #6c655e;
 }
 
 img {
