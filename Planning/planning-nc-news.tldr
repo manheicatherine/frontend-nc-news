@@ -202,7 +202,7 @@
                 "id": "start",
                 "index": 0,
                 "point": [
-                  217.89,
+                  217.88,
                   0
                 ],
                 "canBind": true
@@ -221,7 +221,7 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  108.95,
+                  108.94,
                   30.94
                 ]
               }
@@ -440,7 +440,7 @@
                 "id": "start",
                 "index": 0,
                 "point": [
-                  96.01,
+                  96.02,
                   0
                 ],
                 "canBind": true
@@ -1841,7 +1841,7 @@
                 "id": "start",
                 "index": 0,
                 "point": [
-                  114.24,
+                  114.25,
                   0
                 ],
                 "canBind": true
@@ -1860,7 +1860,7 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  57.12,
+                  57.13,
                   34.32
                 ]
               }
