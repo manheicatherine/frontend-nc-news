@@ -3,7 +3,7 @@ export default function Article({ article }) {
     <section key={article.article_id}>
       <li>
         <h2>{article.title}</h2>
-        <img src={article.article_img_url} alt={article.article_id} />
+        <img src={article.article_img_url} alt={`Generic ${article.topic}`} />
         <h3>Topic: {article.topic}</h3>
         <h3>Author: {article.author}</h3>
         <h4>
