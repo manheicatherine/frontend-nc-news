@@ -13,8 +13,16 @@ export function getArticles(article_id) {
 }
 export function getArticleById(id) {
   return articlesApi
-    .get(`/articles/${id}`, { params: { article_id: id } })
+    .get(`/articles/${id}`)
     .then(({ data }) => {
-      return data.article;
+      return data.article[0];
+    });
+}
+
+export function getCommentsOfArticle(id) {
+  return articlesApi
+    .get(`/articles/${id}/comments`)
+    .then(({ data }) => {
+      return data.comments;
     });
 }
