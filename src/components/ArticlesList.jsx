@@ -4,14 +4,20 @@ import Article from "./Article";
 
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getArticles().then((res) => {
       setArticles(res);
+      setIsLoading(false)
     });
   }, [articles]);
 
-  return (
+
+  if(isLoading){
+  return (<h2>Loading...</h2>)
+  } else{
+   return (
     <section>
       <ol>
         {articles.map((article) => {
@@ -19,5 +25,6 @@ export default function ArticlesList() {
         })}
       </ol>
     </section>
-  );
+  ); 
+  }
 }
