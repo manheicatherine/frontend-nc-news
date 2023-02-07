@@ -1,6 +1,5 @@
 * {
   background-color: rgb(255, 253, 251);
-  
 }
 
 .App {
@@ -8,8 +7,8 @@
 }
 
 .App-header {
-  margin-left:40px;
-  margin-right:40px;
+  margin-left: 40px;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +23,17 @@
   padding: 10px;
 }
 
+.comment-card{
+  text-align: left;
+ margin-bottom:50px;
+}
 
+.comment-card-username {
+  font-weight: bold;
+  font-family: Georgia, serif;
+  color: rgb(133, 108, 255);
+  text-shadow: 0 0 8px rgb(239, 121, 255);
+}
 
 h1 {
   font-family: Georgia, serif;
@@ -51,13 +60,16 @@ li {
   color: 1px 1px #5b554f;
 }
 h3 {
-  color:  #524a43;
+  color: #524a43;
   font-family: Georgia, serif;
 }
 
 h4 {
   font-family: Gill Sans, sans-serif;
   font-weight: normal;
+  color: #6c655e;
+}
+h5 {
   color: #6c655e;
 }
 
@@ -68,6 +80,11 @@ img {
   object-fit: cover;
 }
 
+button{
+  border-radius: 30%;
+  border-color: #d79cfe;
+  background-color:#ffecf8
+}
 
 @media (prefers-reduced-motion: no-preference) {
 }
