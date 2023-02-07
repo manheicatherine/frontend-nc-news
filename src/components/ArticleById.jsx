@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticleById } from "../utils/api";
-import Article from "./Article";
 
 export default function ArticleById() {
   const [article, setArticle] = useState([]);
@@ -20,6 +19,17 @@ export default function ArticleById() {
   if (isLoading) {
     return <h2>Loading...</h2>;
   } else {
-    return <Article article={article} />;
+    return ( <section>
+        <h2>{article.title}</h2>
+        <img src={article.article_img_url} alt={`Generic ${article.topic}`} />
+        <h3>Topic: {article.topic}</h3>
+        <h3>Author: {article.author}</h3>
+        <h4>
+          {article.body}
+          <br></br>
+          <br></br>
+          {article.created_at}
+        </h4>
+      </section>);
   }
 }

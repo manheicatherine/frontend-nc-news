@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
+import Home from "./components/Home";
 import ArticlesList from "./components/ArticlesList";
 import ArticleById from "./components/ArticleById";
 
@@ -11,6 +12,7 @@ function App() {
       <header className="App-header">
         <Nav />
         <Routes>
+        <Route path="/" element={<Home />} />
           <Route path="/articles" element={<ArticlesList />} />
           <Route path="/articles/:article_id" element={<ArticleById />} />
         </Routes>

@@ -22,13 +22,11 @@ export default function ArticlesList() {
         <ol>
           {articles.map((article) => {
             return (
-              <section key={article.article_id}>
-                 <li>
+              <li key={article.article_id} className="card">
                 <Link to={`/articles/${article.article_id}`} className="navbar">
                   <Article article={article} key={article.article_id} />
                 </Link>
-                </li>
-              </section>
+              </li>
             );
           })}
         </ol>
