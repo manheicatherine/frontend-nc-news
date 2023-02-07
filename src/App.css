@@ -1,38 +1,72 @@
+* {
+  background-color: rgb(255, 253, 251);
+  
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin:40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  text-decoration: none;
+  color: rgb(82, 66, 66);
+  font-family: Copperplate;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-family: Georgia, serif;
+  margin: 20px;
+  padding: 60px;
+  color: #675250;
+  text-shadow: 2px 2px #ffa4a6;
+  -webkit-text-stroke: 1px #71443f;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://img.freepik.com/free-vector/realistic-vintage-papers_1284-25431.jpg");
+}
+
+h2 {
+  font-family: Copperplate;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(255, 143, 143);
+  text-shadow: 1px 1px #5b554f;
+}
+
+li {
+  font-family: "Copperplate";
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: 1px 1px #5b554f;
+}
+h3 {
+  color:  #524a43;
+  font-family: Georgia, serif;
+}
+
+h4 {
+  font-family: Gill Sans, sans-serif;
+  font-weight: normal;
+  color: #6c655e;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: no-preference) {
 }
