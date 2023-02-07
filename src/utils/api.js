@@ -15,7 +15,7 @@ export function getArticleById(id) {
   return articlesApi
     .get(`/articles/${id}`)
     .then(({ data }) => {
-      return data.article;
+      return data.article[0];
     });
 }
 

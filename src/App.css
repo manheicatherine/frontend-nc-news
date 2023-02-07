@@ -23,12 +23,20 @@
   padding: 10px;
 }
 
-.comment-card{
+.comment-card {
   text-align: left;
- margin-bottom:50px;
+  margin-bottom: 50px;
+}
+
+.comment-title {
+  font-family: Georgia, serif;
+  color: rgb(98, 85, 96);
+  text-shadow: 2px 2px 2px #b996ff;
+  text-align: left;
 }
 
 .comment-card-username {
+  text-align: left;
   font-weight: bold;
   font-family: Georgia, serif;
   color: rgb(133, 108, 255);
@@ -80,10 +88,10 @@ img {
   object-fit: cover;
 }
 
-button{
+button {
   border-radius: 30%;
   border-color: #d79cfe;
-  background-color:#ffecf8
+  background-color: #ffecf8;
 }
 
 @media (prefers-reduced-motion: no-preference) {
