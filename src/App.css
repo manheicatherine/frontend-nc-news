@@ -43,6 +43,13 @@
   text-shadow: 0 0 8px rgb(239, 121, 255);
 }
 
+.votesbutton{
+  border-radius: 30%;
+  border-color: #ffb2c4;
+  background-color: #ffecf8;
+  margin: 10px;
+}
+
 h1 {
   font-family: Georgia, serif;
   margin: 20px;
@@ -69,7 +76,7 @@ li {
 }
 h3 {
   color: #524a43;
-  font-family: Georgia, serif;
+  font-family: "Copperplate";
 }
 
 h4 {
@@ -92,6 +99,7 @@ button {
   border-radius: 30%;
   border-color: #d79cfe;
   background-color: #ffecf8;
+  margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

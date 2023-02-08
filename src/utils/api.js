@@ -12,17 +12,19 @@ export function getArticles(article_id) {
     });
 }
 export function getArticleById(id) {
-  return articlesApi
-    .get(`/articles/${id}`)
-    .then(({ data }) => {
-      return data.article[0];
-    });
+  return articlesApi.get(`/articles/${id}`).then(({ data }) => {
+    return data.article[0];
+  });
 }
 
 export function getCommentsOfArticle(id) {
-  return articlesApi
-    .get(`/articles/${id}/comments`)
-    .then(({ data }) => {
-      return data.comments;
-    });
+  return articlesApi.get(`/articles/${id}/comments`).then(({ data }) => {
+    return data.comments;
+  });
+}
+
+export function updateArticleVote(id, votes) {
+  const patchBody = { inc_votes: votes };
+  return articlesApi.patch(`/articles/${id}`, patchBody).then((res)=>{
+  });
 }

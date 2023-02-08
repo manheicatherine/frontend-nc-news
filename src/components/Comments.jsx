@@ -4,7 +4,10 @@ export default function Comments({ comment }) {
   const formattedDate = new Date(comment.created_at)
     .toISOString()
     .replace("T", " ")
-    .replace("Z", "");
+    .replace("Z", "")
+    .split("")
+    .slice(0, -4)
+    .join("");
 
   return (
     <section>
