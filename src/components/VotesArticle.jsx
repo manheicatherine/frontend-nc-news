@@ -7,12 +7,12 @@ export default function VotesArticle({ article_id, votes }) {
 
   const handleLike = () => {
     setUpdateVotes((currChange) => currChange + 1);
-    updateArticleVote(article_id, 1).catch((err) => console.log(err));
+    updateArticleVote(article_id, 1).catch((err) => alert(err.message));
   };
 
   const handleDisike = () => {
     setUpdateVotes((currChange) => currChange - 1);
-    updateArticleVote(article_id, -1).catch((err) => console.log(err));
+    updateArticleVote(article_id, -1).catch((err) => alert(err.message));
   };
 
   return (

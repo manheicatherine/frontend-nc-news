@@ -25,6 +25,5 @@ export function getCommentsOfArticle(id) {
 
 export function updateArticleVote(id, votes) {
   const patchBody = { inc_votes: votes };
-  return articlesApi.patch(`/articles/${id}`, patchBody).then((res)=>{
-  });
+  return articlesApi.patch(`/articles/${id}`, patchBody)
 }
