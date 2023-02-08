@@ -18,12 +18,12 @@ export default function ArticlesList() {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <section>
+      <section >
         <ol>
           {articles.map((article) => {
             return (
-              <li key={article.article_id} className="card">
-                <Link to={`/articles/${article.article_id}`} className="navbar">
+              <li key={article.article_id} >
+                <Link to={`/articles/${article.article_id}`} className="navbar-article">
                   <Article article={article} key={article.article_id} />
                 </Link>
               </li>

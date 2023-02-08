@@ -6,6 +6,7 @@ import {
 } from "../utils/api";
 import Comments from "./Comments";
 import VotesArticle from "./VotesArticle";
+import AddComments from "./AddComments";
 
 export default function ArticleById() {
   const [article, setArticle] = useState([]);
@@ -14,9 +15,6 @@ export default function ArticleById() {
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
 
-  //if I set conditional logic the page stay in loading state
-  //I press the button which turns NaN
-  //Also, the button show AxiosError
   useEffect(() => {
     setIsLoading(true);
     Promise.all([
@@ -28,7 +26,7 @@ export default function ArticleById() {
     });
     setVotes(article.votes);
     setIsLoading(false);
-  }, [article_id]);
+  }, [article_id, article.votes]);
 
   if (isLoading && !votes) {
     return <h2>Loading...</h2>;
@@ -48,6 +46,7 @@ export default function ArticleById() {
           {article.created_at}
         </h4>
         <h3 className="comment-title">COMMENTS:</h3>
+        <AddComments article_id={article_id}/>
         <h5>
           <ol>
             {comments.map((comment) => {
