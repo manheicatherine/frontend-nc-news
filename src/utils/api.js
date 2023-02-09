@@ -29,6 +29,5 @@ export function updateArticleVote(id, votes) {
 }
 
 export function postArticleVote(id, body) {
-  console.log(body)
   return articlesApi.post(`/articles/${id}/comments`, body);
 }

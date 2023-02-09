@@ -3,21 +3,25 @@ import { useState, useEffect } from "react";
 import { postArticleVote } from "../utils/api";
 
 export default function AddComments({ article_id }) {
-  const [isPosted, setIsPost] = useState(false);
+  const [postedMessage, setPostedMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [newComment, setNewComment] = useState({
     username: "",
     body: "",
   });
-
+  console.log(postedMessage);
   useEffect(() => {
-    setIsPost(false);
     if (newComment.username !== "") {
       postArticleVote(article_id, newComment)
-        .then((res) => alert("Posted successfully. Please refresh the page."))
+        .then((res) => {
+          setPostedMessage("Posted comment successfully!");
+          setTimeout(window.location.reload(false), 8000);
+        })
         .catch((err) => {
-          alert("Please enter a correct username or valid comments. Please refresh the page.");
+          setErrorMessage(
+            "Sorry, please try again with a valid username and comments."
+          );
         });
-      setIsPost(true);
     }
   }, [newComment, article_id]);
 
@@ -33,15 +37,20 @@ export default function AddComments({ article_id }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label className="addCommentTextbox">Username:</label>
-        <input type="text" className="addCommentTextbox"></input>
-        <label className="addCommentTextbox">Comments:</label>
+        <label className="addUsernameTextbox">Username:</label>
+        <input type="text" className="addUsernameTextbox"></input>
+        <label className="addUsernameTextbox">Comments:</label>
         <input type="text" className="addCommentTextbox"></input>
         <input
           type="submit"
           className="addCommentSubmit"
-          disabled={isPosted === true}
+          disabled={postedMessage === "Posted comment successfully!"}
         ></input>
+        {postedMessage ? (
+          <h3 className="successfulMsg">{postedMessage}</h3>
+        ) : (
+          <h3 className="errorMsg">{errorMessage}</h3>
+        )}
         <br></br>
       </form>
     </div>

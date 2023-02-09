@@ -32,8 +32,8 @@
 }
 
 .article-design{
-  border:#8d7f79 solid;
-  box-shadow: 10px 10px rgb(124, 105, 105) ;
+  border:#edd9d0 solid;
+  box-shadow: 10px 10px rgb(218, 206, 198) ;
   padding-left:40px;
   padding-right:40px;
 }
@@ -67,12 +67,23 @@
   margin: 10px;
 }
 
-.addCommentTextbox{
+.addUsernameTextbox{
   text-align: center;
   font-family:Georgia, 'Times New Roman', Times, serif;
   color: #675250;
   margin: auto;
   display: block;
+  border-radius: 5px;
+  border-color: #9e9d9e;
+}
+
+.addCommentTextbox{
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: #675250;
+  display: block;
+  width: 100%;
+  max-width: 100%;
   border-radius: 5px;
   border-color: #9e9d9e;
 }
@@ -83,6 +94,20 @@
   font-family: Georgia, serif;
   border-color: #debdfc;
   background-color: #a282f8;
+}
+
+.successfulMsg{
+  font-family: Trebuchet MS, sans-serif;
+  font-weight:normal;
+  color:rgb(78, 201, 152);
+  font-size: 13px;
+}
+
+.errorMsg{
+  font-family: Trebuchet MS, sans-serif;
+  font-weight:normal;
+  color:red;
+  font-size: 13px;
 }
 
 h1 {

@@ -3,16 +3,21 @@ import { useState } from "react";
 import { updateArticleVote } from "../utils/api";
 
 export default function VotesArticle({ article_id, votes }) {
+  const [errorMessage, setErrorMessage] = useState("");
   const [updatevotes, setUpdateVotes] = useState(0);
 
   const handleLike = () => {
     setUpdateVotes((currChange) => currChange + 1);
-    updateArticleVote(article_id, 1).catch((err) => alert(err.message));
+    updateArticleVote(article_id, 1).catch((err) =>
+      setErrorMessage(err.message)
+    );
   };
 
   const handleDisike = () => {
     setUpdateVotes((currChange) => currChange - 1);
-    updateArticleVote(article_id, -1).catch((err) => alert(err.message));
+    updateArticleVote(article_id, -1).catch((err) =>
+      setErrorMessage(err.message)
+    );
   };
 
   return (
@@ -32,6 +37,7 @@ export default function VotesArticle({ article_id, votes }) {
       >
         -
       </button>
+      <h2>{errorMessage}</h2>
     </section>
   );
 }
