@@ -4,9 +4,9 @@ import {
   getArticleById,
   getCommentsOfArticle,
 } from "../utils/api";
-import Comments from "./Comments";
 import VotesArticle from "./VotesArticle";
 import AddComments from "./AddComments";
+import CommentList from "./CommentList";
 
 export default function ArticleById() {
   const [article, setArticle] = useState([]);
@@ -14,6 +14,8 @@ export default function ArticleById() {
   const [votes, setVotes] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
+
+
 
   useEffect(() => {
     setIsLoading(true);
@@ -45,17 +47,10 @@ export default function ArticleById() {
           <br></br>
           {article.created_at}
         </h4>
-        <h3 className="comment-title">COMMENTS:</h3>
-        <AddComments article_id={article_id}/>
         <h5>
           <ol>
-            {comments.map((comment) => {
-              return (
-                <li key={comment.comment_id} className="comment-card">
-                  <Comments comment={comment} />
-                </li>
-              );
-            })}
+            <AddComments article_id={article_id} setComments={setComments} comments={comments} />
+            <CommentList comments={comments}/>
           </ol>
         </h5>
       </section>

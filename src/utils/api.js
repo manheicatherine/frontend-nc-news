@@ -28,6 +28,6 @@ export function updateArticleVote(id, votes) {
   return articlesApi.patch(`/articles/${id}`, patchBody);
 }
 
-export function postArticleVote(id, body) {
+export function postNewComment(id, body) {
   return articlesApi.post(`/articles/${id}/comments`, body);
 }

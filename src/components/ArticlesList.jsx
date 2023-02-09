@@ -18,8 +18,8 @@ export default function ArticlesList() {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <section >
-        <ol>
+      <section  className="articlesContainer">
+        <ol >
           {articles.map((article) => {
             return (
               <li key={article.article_id} >
