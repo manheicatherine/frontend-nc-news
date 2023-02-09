@@ -96,6 +96,7 @@
   font-family: Georgia, serif;
   border-color: #debdfc;
   background-color: #a282f8;
+  border-radius: 6px;
 }
 
 .successfulMsg{
