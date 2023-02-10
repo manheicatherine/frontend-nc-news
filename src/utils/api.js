@@ -41,10 +41,7 @@ export function getTopics() {
 }
 
 export function getArticlesByTopics(topic) {
-  return articlesApi.get("./articles").then(({ data }) => {
-    const filterTopic = data.articles.filter((article) => {
-      return article.topic === topic;
-    });
-    return filterTopic;
+  return articlesApi.get("./articles", { params:{topic: topic} }).then(({ data }) => {
+    return data.articles;
   });
 }
