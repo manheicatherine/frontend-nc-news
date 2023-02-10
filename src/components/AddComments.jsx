@@ -52,6 +52,7 @@ export default function AddComments({ article_id, setComments}) {
           name="username"
           value={newComment.username}
           onChange={handleChange}
+          placeholder="Put your username here..."
         ></input>
         <label className="addUsernameTextbox">Comments:</label>
         <input
@@ -60,6 +61,7 @@ export default function AddComments({ article_id, setComments}) {
           name="body"
           value={newComment.body}
           onChange={handleChange}
+          placeholder="Put your comments here..."
         ></input>
         <input
           type="submit"
