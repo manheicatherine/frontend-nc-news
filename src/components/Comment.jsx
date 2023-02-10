@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Comments({ comment }) {
+export default function Comment({ comment }) {
   const formattedDate = new Date(comment.created_at)
     .toISOString()
     .replace("T", " ")
@@ -10,11 +10,11 @@ export default function Comments({ comment }) {
     .join("");
 
   return (
-    <section>
+    <>
       <h4 className="comment-card-username">User: {comment.author}</h4>
       <h4>{comment.body}</h4>
       <h5>{formattedDate}</h5>
       <button>{comment.votes}</button>
-    </section>
+    </>
   );
 }
