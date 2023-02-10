@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { postNewComment } from "../utils/api";
 
-export default function AddComments({ article_id, setComments, comments }) {
+export default function AddComments({ article_id, setComments}) {
   const [postedMessage, setPostedMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [newComment, setNewComment] = useState({
@@ -35,7 +35,11 @@ export default function AddComments({ article_id, setComments, comments }) {
         });
     }
 
-    setNewComment("");
+    setNewComment({
+        username: "",
+        body: "",
+      });
+    
   };
 
   return (
@@ -48,6 +52,7 @@ export default function AddComments({ article_id, setComments, comments }) {
           name="username"
           value={newComment.username}
           onChange={handleChange}
+          placeholder="Put your username here..."
         ></input>
         <label className="addUsernameTextbox">Comments:</label>
         <input
@@ -56,6 +61,7 @@ export default function AddComments({ article_id, setComments, comments }) {
           name="body"
           value={newComment.body}
           onChange={handleChange}
+          placeholder="Put your comments here..."
         ></input>
         <input
           type="submit"

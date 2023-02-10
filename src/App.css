@@ -22,6 +22,7 @@
   color: rgb(82, 66, 66);
   font-family: Copperplate;
   padding: 10px;
+  font-size: 16px;
   
 }
 
@@ -78,6 +79,9 @@
   display: block;
   border-radius: 5px;
   border-color: #9e9d9e;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 
 .addCommentTextbox{
@@ -89,6 +93,11 @@
   max-width: 100%;
   border-radius: 5px;
   border-color: #9e9d9e;
+  width: 300px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .addCommentSubmit{

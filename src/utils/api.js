@@ -31,3 +31,17 @@ export function updateArticleVote(id, votes) {
 export function postNewComment(id, body) {
   return articlesApi.post(`/articles/${id}/comments`, body);
 }
+
+export function getTopics() {
+  return articlesApi
+    .get(`https://catherine-nc-news.onrender.com/api/topics`)
+    .then(({ data }) => {
+      return data.topics;
+    });
+}
+
+export function getArticlesByTopics(topic) {
+  return articlesApi.get("./articles", { params:{topic: topic} }).then(({ data }) => {
+    return data.articles;
+  });
+}

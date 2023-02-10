@@ -49,7 +49,7 @@ export default function ArticleById() {
         </h4>
         <h5>
           <ol>
-            <AddComments article_id={article_id} setComments={setComments} comments={comments} />
+            <AddComments article_id={article_id} setComments={setComments}  />
             <CommentList comments={comments}/>
           </ol>
         </h5>
