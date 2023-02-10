@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { postNewComment } from "../utils/api";
 
-export default function AddComments({ article_id, setComments, comments }) {
+export default function AddComments({ article_id, setComments}) {
   const [postedMessage, setPostedMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [newComment, setNewComment] = useState({
@@ -35,7 +35,11 @@ export default function AddComments({ article_id, setComments, comments }) {
         });
     }
 
-    setNewComment("");
+    setNewComment({
+        username: "",
+        body: "",
+      });
+    
   };
 
   return (

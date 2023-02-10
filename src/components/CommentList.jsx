@@ -8,7 +8,9 @@ export default function CommentList({ comments }) {
     <section>
       <ol>
         {comments.map((comment) => {
-          return ( <li key={comment.comment_id}><Comment comment={comment} /></li>);
+          return ( <li key={comment.comment_id}>
+            <Comment comment={comment} />
+            </li>);
         })}
       </ol>
     </section>
