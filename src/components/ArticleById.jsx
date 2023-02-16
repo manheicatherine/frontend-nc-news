@@ -14,11 +14,13 @@ export default function ArticleById() {
   const [comments, setComments] = useState([]);
   const [votes, setVotes] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [deleteComments, setDeleteComments] = useState([]);
+
+  const [postedMessage, setPostedMessage] = useState("");
   
   const { article_id } = useParams();
 
   useEffect(() => {
+   
     setIsLoading(true);
     Promise.all([
       getArticleById(article_id),
@@ -29,7 +31,8 @@ export default function ArticleById() {
     });
     setVotes(article.votes);
     setIsLoading(false);
-  }, [article_id, article.votes]);
+   
+  }, [article_id, article.votes,  comments, postedMessage]);
 
   if (isLoading && !votes) {
     return <h2>Loading...</h2>;
@@ -38,8 +41,8 @@ export default function ArticleById() {
       <section>
         <h2>{article.title}</h2>
         <img src={article.article_img_url} alt={`Generic ${article.topic}`} />
-        <h3>Topic: {article.topic}</h3>
         <h3>Author: {article.author}</h3>
+        <h3>Topic: {article.topic}</h3>
         <h2>Votes:</h2>
         <VotesArticle article_id ={article_id} votes = {article.votes} />
         <h4>
@@ -50,8 +53,8 @@ export default function ArticleById() {
         </h4>
         <h5>
           <ol>
-            <AddComments article_id={article_id} setComments={setComments}  />
-            <CommentList comments={comments} setDeleteComments={setDeleteComments}/>
+            <AddComments article_id={article_id} setComments={setComments}  setPostedMessage={setPostedMessage} postedMessage={postedMessage}/>
+            <CommentList comments={comments} />
           </ol>
         </h5>
       </section>

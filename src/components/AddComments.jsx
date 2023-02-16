@@ -2,8 +2,7 @@ import React from "react";
 import { useState} from "react";
 import { postNewComment } from "../utils/api";
 
-export default function AddComments({ article_id, setComments}) {
-  const [postedMessage, setPostedMessage] = useState("");
+export default function AddComments({ article_id, setComments, setPostedMessage, postedMessage}) {
   const [errorMessage, setErrorMessage] = useState("");
   const [newComment, setNewComment] = useState({
     username: "",
@@ -11,6 +10,7 @@ export default function AddComments({ article_id, setComments}) {
   });
 
   const handleChange = (e) => {
+    setPostedMessage("")
     const value = e.target.value;
     setNewComment({
       ...newComment,

@@ -41,12 +41,13 @@ export default function ArticlesList() {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <section className="articlesContainer">
-        <SortBy
+      <>
+       <SortBy
           handleSortBy={handleSortBy}
           handleOrder={handleOrder}
           order={order}
         />
+      <section className="articlesContainer">
         <ol>
           {articles.map((article) => {
             return (
@@ -61,7 +62,7 @@ export default function ArticlesList() {
             );
           })}
         </ol>
-      </section>
+      </section></>
     );
   }
 }

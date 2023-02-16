@@ -55,6 +55,6 @@ export function getTopics() {
   });
 }
 
-export function deleteNewComment( comment_id) {
+export function deleteNewComment(comment_id) {
   return articlesApi.delete(`/comments/${comment_id}`);
 }
