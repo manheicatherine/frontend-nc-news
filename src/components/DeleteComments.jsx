@@ -1,7 +1,8 @@
 import React from "react";
 import { deleteNewComment } from "../utils/api";
 
-export default function DeleteComments({ comment }) {
+
+export default function DeleteComments({ comment}) {
   const handleClick = (e) => {
     deleteNewComment(comment.comment_id);
   };

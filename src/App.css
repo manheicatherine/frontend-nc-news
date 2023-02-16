@@ -5,6 +5,7 @@
 
 .App {
   text-align: center;
+
 }
 
 .App-header {
@@ -31,6 +32,12 @@
   color: rgb(82, 66, 66);
   font-family: Copperplate;
   padding: 10px;
+}
+
+.articlescontainer{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .article-design{
@@ -71,7 +78,6 @@
 
 .addUsernameTextbox{
   text-align: center;
-  font-family:Georgia, 'Times New Roman', Times, serif;
   color: #675250;
   margin: auto;
   display: block;
@@ -84,7 +90,6 @@
 
 .addCommentTextbox{
   text-align: center;
-  font-family:Georgia, 'Times New Roman', Times, serif;
   color: #675250;
   display: block;
   width: 100%;
@@ -123,11 +128,12 @@
 
 .sortBy{
 text-align: right;
+
 }
 
 .sortByButton{
   position:relative;
-  left: 100px;
+  left: 200px;
   border-radius: 20%;
   border-color: #c1ffeaa1;
   background-color: #feedf8df;
@@ -136,8 +142,6 @@ text-align: right;
   padding: 6px;
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
   color:#45403a
-  
-  
 }
 
 h1 {

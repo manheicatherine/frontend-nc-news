@@ -12,7 +12,6 @@ export default function Topic() {
   const [order, setOrder] = useState("DESC");
   const [sortBy, setSortby] = useState("");
   const { slug } = useParams();
-  console.log(articles);
 
   useEffect(() => {
     if (sortBy === "") {
