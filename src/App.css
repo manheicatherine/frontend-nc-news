@@ -33,8 +33,6 @@
   padding: 10px;
 }
 
-
-
 .article-design{
   border:#edd9d0 solid;
   box-shadow: 10px 10px rgb(218, 206, 198) ;
@@ -121,6 +119,25 @@
   font-weight:normal;
   color:red;
   font-size: 13px;
+}
+
+.sortBy{
+text-align: right;
+}
+
+.sortByButton{
+  position:relative;
+  left: 100px;
+  border-radius: 20%;
+  border-color: #c1ffeaa1;
+  background-color: #feedf8df;
+  margin: 5px;
+  width: 100px;
+  padding: 6px;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  color:#45403a
+  
+  
 }
 
 h1 {

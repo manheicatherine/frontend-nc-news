@@ -1,6 +1,9 @@
 import React from "react";
+import DeleteComments from "./DeleteComments";
+import { useEffect, useState } from "react";
 
 export default function Comment({ comment }) {
+
   const formattedDate = new Date(comment.created_at)
     .toISOString()
     .replace("T", " ")
@@ -15,6 +18,7 @@ export default function Comment({ comment }) {
       <h4>{comment.body}</h4>
       <h5>{formattedDate}</h5>
       <button>{comment.votes}</button>
+      <DeleteComments comment={comment}/>
     </>
   );
 }

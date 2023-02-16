@@ -8,14 +8,15 @@ import VotesArticle from "./VotesArticle";
 import AddComments from "./AddComments";
 import CommentList from "./CommentList";
 
+
 export default function ArticleById() {
   const [article, setArticle] = useState([]);
   const [comments, setComments] = useState([]);
   const [votes, setVotes] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [deleteComments, setDeleteComments] = useState([]);
+  
   const { article_id } = useParams();
-
-
 
   useEffect(() => {
     setIsLoading(true);
@@ -50,7 +51,7 @@ export default function ArticleById() {
         <h5>
           <ol>
             <AddComments article_id={article_id} setComments={setComments}  />
-            <CommentList comments={comments}/>
+            <CommentList comments={comments} setDeleteComments={setDeleteComments}/>
           </ol>
         </h5>
       </section>
