@@ -11,6 +11,8 @@ export default function ArticlesList() {
   const [sortBy, setSortby] = useState("");
   const [order, setOrder] = useState("DESC");
 
+
+
   useEffect(() => {
     if (sortBy === "") {
       getArticles().then((res) => {

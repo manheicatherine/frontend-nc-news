@@ -10,12 +10,21 @@ export default function AddComments({ article_id, setComments, setPostedMessage,
   });
 
   const handleChange = (e) => {
-    setPostedMessage("")
+    if(newComment.username === "" ){
+      setErrorMessage(
+        "Sorry, please enter username."
+      );
+    }
+    if(newComment.username!== "" || newComment.body!== "")
+    setErrorMessage(
+      ""
+    );
+  {  setPostedMessage("")
     const value = e.target.value;
     setNewComment({
       ...newComment,
       [e.target.name]: value,
-    });
+    });}
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +43,6 @@ export default function AddComments({ article_id, setComments, setPostedMessage,
           );
         });
     }
-
     setNewComment({
         username: "",
         body: "",

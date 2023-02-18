@@ -6,6 +6,7 @@ import ArticlesList from "./components/ArticlesList";
 import ArticleById from "./components/ArticleById";
 import Topics from "./components/Topics"
 import Topic from './components/Topic'
+import Error from "./components/Error"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <header className="App-header">
         <Nav />
         <Routes>
+        <Route path="/*" element={<Error />} />
         <Route path="/" element={<Home />} />
           <Route path="/articles" element={<ArticlesList />} />
           <Route path="/articles/:article_id" element={<ArticleById />} />

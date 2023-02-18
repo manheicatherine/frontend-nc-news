@@ -14,11 +14,11 @@ export default function ArticleById() {
   const [comments, setComments] = useState([]);
   const [votes, setVotes] = useState();
   const [isLoading, setIsLoading] = useState(true);
-
   const [postedMessage, setPostedMessage] = useState("");
-  
   const { article_id } = useParams();
 
+
+  
   useEffect(() => {
    
     setIsLoading(true);
