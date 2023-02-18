@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Article from "./Article";
 import SortBy from "./SortBy";
+import { useNavigate } from "react-router-dom";
 
 export default function Topic() {
   const [articles, setArticles] = useState([]);
@@ -12,18 +13,19 @@ export default function Topic() {
   const [order, setOrder] = useState("DESC");
   const [sortBy, setSortby] = useState("");
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (sortBy === "") {
       getArticlesByTopics(slug).then((res) => {
         setArticles(res);
-      });
+      }).catch((error)=>{ navigate("/*");})
       setIsLoading(false);
     } else {
       sortArticles(sortBy, order).then((res) => {
         setArticles(res);
         setIsLoading(false);
-      });
+      })
     }
   }, [slug, order, sortBy]);
 

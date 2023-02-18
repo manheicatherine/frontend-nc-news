@@ -15,7 +15,7 @@ export default function AddComments({ article_id, setComments, setPostedMessage,
         "Sorry, please enter username."
       );
     }
-    if(newComment.username!== "" || newComment.body!== "")
+    if(newComment.username!== "" )
     setErrorMessage(
       ""
     );

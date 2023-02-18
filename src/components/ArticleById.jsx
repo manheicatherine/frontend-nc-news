@@ -7,6 +7,8 @@ import {
 import VotesArticle from "./VotesArticle";
 import AddComments from "./AddComments";
 import CommentList from "./CommentList";
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function ArticleById() {
@@ -16,11 +18,10 @@ export default function ArticleById() {
   const [isLoading, setIsLoading] = useState(true);
   const [postedMessage, setPostedMessage] = useState("");
   const { article_id } = useParams();
-
-
+  const navigate = useNavigate();
   
   useEffect(() => {
-   
+
     setIsLoading(true);
     Promise.all([
       getArticleById(article_id),
@@ -28,12 +29,13 @@ export default function ArticleById() {
     ]).then((results) => {
       setArticle(results[0]);
       setComments(results[1]);
-    });
-    setVotes(article.votes);
+      setVotes(article.votes);
+    }).catch((error)=>{ navigate("/*");})
     setIsLoading(false);
    
   }, [article_id, article.votes,  comments, postedMessage]);
 
+  
   if (isLoading && !votes) {
     return <h2>Loading...</h2>;
   } else {

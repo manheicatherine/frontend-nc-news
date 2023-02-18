@@ -7,7 +7,7 @@ export default function Home() {
       <h3>
         Welcome to NC News.
         <br></br>
-        Northcoders News is a social news aggregation, web content rating, and
+        Northcoders News is my front-end and back-end project of social news aggregation, web content rating, and
         discussion website.
       </h3>
     </div>
