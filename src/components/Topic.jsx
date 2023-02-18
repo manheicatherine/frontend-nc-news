@@ -30,7 +30,7 @@ export default function Topic() {
   }, [slug, order, sortBy]);
 
   const handleSortBy = (e) => {
-    console.log(e.target.value);
+
     setSortby(e.target.value);
   };
 
