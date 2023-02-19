@@ -27,7 +27,7 @@ export default function Topic() {
         setIsLoading(false);
       })
     }
-  }, [slug, order, sortBy]);
+  }, [slug, order, sortBy, navigate]);
 
   const handleSortBy = (e) => {
 

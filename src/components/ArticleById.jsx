@@ -30,10 +30,10 @@ export default function ArticleById() {
       setArticle(results[0]);
       setComments(results[1]);
       setVotes(article.votes);
-    }).catch((error)=>{ navigate("/*");})
+    }).catch((error)=>{ navigate("/*")})
     setIsLoading(false);
    
-  }, [article_id, article.votes,  comments, postedMessage]);
+  }, [article_id, article.votes,  comments, postedMessage, navigate]);
 
   
   if (isLoading && !votes) {
