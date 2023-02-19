@@ -11,7 +11,7 @@ import Error from "./components/Error"
 function App() {
   return (
     <div className="App">
-      <h1>NC NEWS</h1>
+      <h1 className="headerH1">NC NEWS</h1>
       <header className="App-header">
         <Nav />
         <Routes>

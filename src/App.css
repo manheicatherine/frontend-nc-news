@@ -18,6 +18,7 @@
   font-size: calc(10px + 2vmin);
 }
 
+
 .navbar {
   text-decoration: none;
   color: rgb(82, 66, 66);
@@ -39,6 +40,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 
 .article-design{
   border:#edd9d0 solid;

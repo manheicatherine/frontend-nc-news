@@ -2,16 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { getArticles, sortArticles } from "../utils/api";
 import Article from "./Article";
-import { Link } from "react-router-dom";
 import SortBy from "./SortBy";
-
+import { Link } from "react-router-dom";
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortby] = useState("");
   const [order, setOrder] = useState("DESC");
-
-
 
   useEffect(() => {
     if (sortBy === "") {
@@ -44,27 +41,28 @@ export default function ArticlesList() {
   } else {
     return (
       <>
-       <SortBy
+        <SortBy
           handleSortBy={handleSortBy}
           handleOrder={handleOrder}
           order={order}
         />
-      <section className="articlesContainer">
-        <ol>
-          {articles.map((article) => {
-            return (
-              <li key={article.article_id}>
-                <Link
-                  to={`/articles/${article.article_id}`}
-                  className="navbar-article"
-                >
-                  <Article article={article} key={article.article_id} />
-                </Link>
-              </li>
-            );
-          })}
-        </ol>
-      </section></>
+        <section className="articlesContainer">
+          <ol>
+            {articles.map((article) => {
+              return (
+                <li key={article.article_id} className="each-article">
+                  <Link
+                    to={`/articles/${article.article_id}`}
+                    className="navbar-article"
+                  >
+                    <Article article={article} key={article.article_id} />
+                  </Link>{" "}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      </>
     );
   }
 }
