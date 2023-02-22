@@ -7,6 +7,7 @@ import ArticleById from "./components/ArticleById";
 import Topics from "./components/Topics"
 import Topic from './components/Topic'
 import Error from "./components/Error"
+import SiginIn from "./components/SignIn"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/topics" element={<Topics />} />
           <Route path="/topics/:slug" element={<Topic />} />
           <Route path="/article/" element={<Topic />} />
+          <Route path="/users" element={<SiginIn />} />
         </Routes>
       </header>
     </div>

@@ -6,6 +6,7 @@ export default function Nav() {
     <Link to="/" className="navbar">Home</Link>
     <Link to="/articles" className="navbar">All Articles</Link>
     <Topics />
+    <Link to="/users" className="navbar">Users</Link>
    </nav>
   )
 }

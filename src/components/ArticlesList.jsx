@@ -56,7 +56,7 @@ export default function ArticlesList() {
                     className="navbar-article"
                   >
                     <Article article={article} key={article.article_id} />
-                  </Link>{" "}
+                  </Link>
                 </li>
               );
             })}
