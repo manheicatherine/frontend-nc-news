@@ -1,5 +1,5 @@
 ## My front-end and back-end project in Northcoders:
-https://63f1f6136cb34a494e4bd3ad--manheicatherine-ncnews.netlify.app/
+https://manheicatherine-ncnews.netlify.app/
 
 ### About my project:
 In my back-end project, I build several endpoints for fetching news articles.
