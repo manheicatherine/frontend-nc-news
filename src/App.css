@@ -33,12 +33,13 @@
   color: rgb(191, 113, 113);
   font-family: Georgia, serif;
   font-size: 20px;
-padding:20px;
+
 }
 
 .userPic{
   border-radius: 10%;
   object-fit:contain;
+
 }
 
 .navbar-article {
