@@ -4,7 +4,7 @@ import {UserContext} from "../contents/User";
 import { useContext } from "react";
 
 export default function Nav() {
-  const {user, setUser} = useContext(UserContext);
+  const {user} = useContext(UserContext);
   return (
    <nav>
     <Link to="/" className="navbar">Home</Link>
