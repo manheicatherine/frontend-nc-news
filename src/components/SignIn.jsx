@@ -7,7 +7,7 @@ export default function SignIn() {
 
   const [usersList, setUsersList] = useState([]);
   const {user, setUser} = useContext(UserContext);
-  const [userDetails, setUserDetails] = useState([])
+  
 
   useEffect(() => {
     getUser().then((res) => {
@@ -32,7 +32,7 @@ export default function SignIn() {
           return (
             <section key={user.username}>
               <h4>{user.name}</h4>
-              <img class="userPic" src={user.avatar_url} alt={`Generic ${user.username}`} />
+              <img className="userPic" src={user.avatar_url} alt={`Generic ${user.username}`} />
               <button onClick={(e) => login(e)} value={user.username}>
                 {user.username}
               </button>
