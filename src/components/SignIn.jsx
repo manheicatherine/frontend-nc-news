@@ -1,8 +1,3 @@
-import { getUser } from "../utils/api";
-import React, { useEffect, useState } from "react";
-import {UserContext} from "../contents/User";
-import { useContext } from "react";
-
 export default function SignIn() {
   const [usersList, setUsersList] = useState([]);
   const {user, setUser} = useContext(UserContext);
