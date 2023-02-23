@@ -1,12 +1,12 @@
 import { getUser } from "../utils/api";
 import React, { useEffect, useState } from "react";
-import UserProvider from "../contents/User";
-import { Link } from "react-router-dom";
+import {UserContext} from "../contents/User";
 import { useContext } from "react";
 
 export default function SignIn() {
   const [usersList, setUsersList] = useState([]);
-  const [user, setUser] = useState("");
+  const {user, setUser} = useContext(UserContext);
+  const [userDetails, setUserDetails] = useState([])
 
   useEffect(() => {
     getUser().then((res) => {
@@ -16,8 +16,12 @@ export default function SignIn() {
 
   const login = (e) => {
     setUser(e.target.value);
-    
+   
   };
+
+  const handleLogOut =()=>{
+    setUser("")
+  }
 
   if (user === "") {
     return (
@@ -27,14 +31,10 @@ export default function SignIn() {
           return (
             <section key={user.username}>
               <h4>{user.name}</h4>
-              <img src={user.avatar_url} alt={`Generic ${user.username}`} />
+              <img class="userPic" src={user.avatar_url} alt={`Generic ${user.username}`} />
               <button onClick={(e) => login(e)} value={user.username}>
                 {user.username}
               </button>
-              {/* <Link
-          to={`/users/${user.username}`}
-          className="navbar-article"
-        >{user.username}</Link> */}
             </section>
           );
         })}
@@ -43,8 +43,8 @@ export default function SignIn() {
   } else {
     return (
       <div>
-        <h3>Log out</h3>
-        
+       <h3>Click the button to log out!</h3>
+        <button onClick={handleLogOut}>Log out</button>
       </div>
     );
   }
