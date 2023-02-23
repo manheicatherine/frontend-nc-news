@@ -1,5 +1,5 @@
 ## My front-end and back-end project in Northcoders:
-https://63f1f6136cb34a494e4bd3ad--manheicatherine-ncnews.netlify.app/
+https://manheicatherine-ncnews.netlify.app/
 
 ### About my project:
 In my back-end project, I build several endpoints for fetching news articles.
@@ -8,4 +8,4 @@ In each article, users can use to vote, add comments and delete comments functio
 Besides, if the user enter into  non-existent article, topic or non-existent path, the users will lead to 404 error page. 
 
 
-## My back-end link: https://github.com/manheicatherine/be-ncnews
+### My back-end link: https://github.com/manheicatherine/be-ncnews
