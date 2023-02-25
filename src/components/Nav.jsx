@@ -10,7 +10,7 @@ export default function Nav() {
     <Link to="/" className="navbar">Home</Link>
     <Link to="/articles" className="navbar">All Articles</Link>
     <Topics />
-    {user? <Link to="/users" className="Usernavbar">{user}</Link> : <Link to="/users" className="navbar">Log In</Link>}
+    {user? <Link to="/users" className="Usernavbar">User {user}</Link> : <Link to="/users" className="navbar">Log In</Link>}
 
    </nav>
   )

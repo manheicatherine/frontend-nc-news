@@ -31,8 +31,11 @@
 .Usernavbar {
   text-decoration: none;
   color: rgb(191, 113, 113);
-  font-family: Georgia, serif;
+  font-family: Copperplate;
   font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fff7eb;
 
 }
 
