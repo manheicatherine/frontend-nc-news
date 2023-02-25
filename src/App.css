@@ -160,6 +160,18 @@ text-align: right;
   color:#45403a
 }
 
+.username{
+
+  border-radius: 20%;
+  border-color: #ffafcba1;
+  background-color: #feedf8df;
+  margin: 5px;
+  width: 100px;
+  padding: 6px;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  color:#45403a
+}
+
 h1 {
   font-family: Georgia, serif;
   margin: 20px;
