@@ -1,4 +1,4 @@
-#NC News App
+# NC News App
 ## My front-end and back-end project in Northcoders:
 https://manheicatherine-ncnews.netlify.app/
 
