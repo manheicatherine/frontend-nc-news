@@ -1,7 +1,8 @@
+#NC News App
 ## My front-end and back-end project in Northcoders:
 https://manheicatherine-ncnews.netlify.app/
 
-### About my project:
+## Introduction
 In my back-end project, I build several endpoints for fetching news articles.
 
 Therefore, I can utilize the the endpoints for dividing into all articles, article by article ID and article by topic. Moreover, users can use the categories of navbar and they can also sort the articles by date, votes, comments count in ascending order or descending order in "All Articles", articles in "Coding", "Football" and "Cooking".
@@ -10,5 +11,14 @@ In each article, users can use to vote, add comments and delete comments functio
 
 Besides, if the user enter into  non-existent article, topic or non-existent path, the users will lead to 404 error page. 
 
+## Getting Started
+To get started with GYMMER, you're welcome to clone this repository, download the essential dependencies and run "npm start".
+
+##  Built With
+React <br />
+Node.js <br />
+
+## Created By
+[Catherine Li](https://github.com/manheicatherine)
 
 ### My back-end link: https://github.com/manheicatherine/be-ncnews
