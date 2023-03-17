@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getArticles, sortArticles } from "../utils/api";
 import Article from "./Article";
 import SortBy from "./SortBy";
-import { Link } from "react-router-dom";
+
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -47,20 +47,15 @@ export default function ArticlesList() {
           order={order}
         />
         <section className="articlesContainer">
-          <ol>
+          
             {articles.map((article) => {
               return (
-                <li key={article.article_id} className="each-article">
-                  <Link
-                    to={`/articles/${article.article_id}`}
-                    className="navbar-article"
-                  >
-                    <Article article={article} key={article.article_id} />
-                  </Link>
-                </li>
+                <>
+                  <Article article={article} key={article.article_id} />
+                </>
               );
             })}
-          </ol>
+         
         </section>
       </>
     );

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { getArticlesByTopics, sortArticles } from "../utils/api";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Article from "./Article";
 import SortBy from "./SortBy";
 import { useNavigate } from "react-router-dom";
@@ -57,10 +56,8 @@ export default function Topic() {
         <ol>
           {articles.map((article) => {
             return (
-              <section key={article.article_id} className="allarticles">
-                <Link to={`/articles/${article.article_id}`} className="navbar">
-                  <Article article={article} />
-                </Link>
+              <section key={article.article_id} className="navbar-article"> 
+                  <Article article={article} />  
               </section>
             );
           })}

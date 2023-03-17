@@ -1,11 +1,9 @@
 * {
   background-color: rgb(255, 253, 251);
-  
 }
 
 .App {
   text-align: center;
-
 }
 
 .App-header {
@@ -18,14 +16,12 @@
   font-size: calc(10px + 2vmin);
 }
 
-
 .navbar {
   text-decoration: none;
   color: rgb(82, 66, 66);
   font-family: Copperplate;
   padding: 10px;
   font-size: 16px;
-  
 }
 
 .Usernavbar {
@@ -36,41 +32,55 @@
   padding-left: 10px;
   padding-right: 10px;
   background-color: #fff7eb;
-
 }
 
-.userPic{
+.userPic {
   border-radius: 10%;
-  object-fit:contain;
-
+  object-fit: contain;
 }
 
 .navbar-article {
   text-decoration: none;
   color: rgb(82, 66, 66);
   font-family: Copperplate;
-  padding: 10px;
+  
+
 }
 
-.articlescontainer{
-    display: flex;
+.articlescontainer {
+  display: inline-block;
+  /* grid-template-rows: 70px 100px;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; 
+  align-items: stretch ; */
+  grid-template-rows: repeat(3, 150px);
+grid-template-columns: repeat(4, 1fr)
+  
 }
 
+.article-design {
+  border: #edd9d0 solid;
+  box-shadow: 10px 10px rgb(218, 206, 198);
+ padding-top:10px;
+ padding-left:20px;
+ padding-right:20px;
+border-radius: 5%;
+  margin-top: 30px;
+  align-self: center;
+  flex-basis: 25%;
+  margin-left: 500px;
+  margin-right: 500px;
 
-.article-design{
-  border:#edd9d0 solid;
-  box-shadow: 10px 10px rgb(218, 206, 198) ;
-  padding-left:40px;
-  padding-right:40px;
+}
+
+.article-design > h1, h2,h3,h4,h5 {
+font-size: 16px;
 }
 
 .comment-card {
   text-align: left;
   margin-bottom: 50px;
- 
-  
 }
 
 .comment-title {
@@ -88,14 +98,14 @@
   text-shadow: 0 0 8px rgb(239, 121, 255);
 }
 
-.votesbutton{
+.votesbutton {
   border-radius: 30%;
   border-color: #ffb2c4;
   background-color: #ffecf8;
   margin: 10px;
 }
 
-.addUsernameTextbox{
+.addUsernameTextbox {
   text-align: center;
   color: #675250;
   margin: auto;
@@ -104,10 +114,9 @@
   border-color: #9e9d9e;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
-.addCommentTextbox{
+.addCommentTextbox {
   text-align: center;
   color: #675250;
   display: block;
@@ -119,10 +128,9 @@
   height: 100px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-.addCommentSubmit{
+.addCommentSubmit {
   color: #ffffff;
   font-weight: bolder;
   font-family: Georgia, serif;
@@ -131,27 +139,26 @@
   border-radius: 6px;
 }
 
-.successfulMsg{
+.successfulMsg {
   font-family: Trebuchet MS, sans-serif;
-  font-weight:normal;
-  color:rgb(78, 201, 152);
+  font-weight: normal;
+  color: rgb(78, 201, 152);
   font-size: 13px;
 }
 
-.errorMsg{
+.errorMsg {
   font-family: Trebuchet MS, sans-serif;
-  font-weight:normal;
-  color:red;
+  font-weight: normal;
+  color: red;
   font-size: 13px;
 }
 
-.sortBy{
-text-align: right;
-
+.sortBy {
+  text-align: right;
 }
 
-.sortByButton{
-  position:relative;
+.sortByButton {
+  position: relative;
   left: 200px;
   border-radius: 20%;
   border-color: #c1ffeaa1;
@@ -160,10 +167,10 @@ text-align: right;
   width: 100px;
   padding: 6px;
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-  color:#45403a
+  color: #45403a;
 }
 
-.username{
+.username {
   border-radius: 20%;
   border-color: #ffafcba1;
   background-color: #feedf8df;
@@ -171,7 +178,7 @@ text-align: right;
   width: 100px;
   padding: 6px;
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-  color:#45403a
+  color: #45403a;
 }
 
 h1 {
