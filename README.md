@@ -1,5 +1,7 @@
 # NC News App
 ## My front-end and back-end project in Northcoders:
+<img src="https://user-images.githubusercontent.com/113735691/225912083-59699daa-494c-4d90-8636-b4727ea62a0f.png" width="400" height="220">
+
 https://manheicatherine-ncnews.netlify.app/
 
 ## Introduction
