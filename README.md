@@ -1,8 +1,10 @@
 # NC News App
-## My front-end and back-end project in Northcoders:
+## Front-end Project In Northcoders:
 <img src="https://user-images.githubusercontent.com/113735691/225912083-59699daa-494c-4d90-8636-b4727ea62a0f.png" width="400" height="220">
 
 https://manheicatherine-ncnews.netlify.app/
+
+***Back-end Link: https://github.com/manheicatherine/be-ncnews***
 
 ## Introduction
 In my back-end project, I build several endpoints for fetching news articles.
@@ -23,4 +25,3 @@ Node.js <br />
 ## Created By
 [Catherine Li](https://github.com/manheicatherine)
 
-### My back-end link: https://github.com/manheicatherine/be-ncnews
