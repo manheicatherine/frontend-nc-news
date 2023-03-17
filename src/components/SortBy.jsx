@@ -3,8 +3,8 @@ import React from "react";
 const SortBy = ({ handleSortBy, handleOrder, order }) => {
     
   return (
-    <section>
-      <h3 className="sortBy">Sort By:</h3>
+    <section className="sortBy">
+      <h3 className="sortBy-title">Sort By</h3>
       <button
         value="created_at"
         onClick={handleSortBy}
